@@ -15,4 +15,5 @@ public abstract class Equipment
         this.iD = iD;
     }
     
+    
 }
