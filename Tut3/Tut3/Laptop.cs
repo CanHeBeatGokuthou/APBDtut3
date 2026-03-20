@@ -6,7 +6,7 @@ public class Laptop : Equipment
     private int RAM;
 
     public Laptop(string name, bool available,
-        long id, string type, int ram):base(name,available,id)
+        long id, string type, int ram):base(name,available)
     {
         this.type = type; 
         RAM = ram;

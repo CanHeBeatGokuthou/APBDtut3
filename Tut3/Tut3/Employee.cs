@@ -6,8 +6,7 @@ public class Employee:User
     int random = Random.Shared.Next(3);
     string type;
 
-    public Employee(string name, string surname,
-        long id) : base(name, surname, id)
+    public Employee(string name, string surname) : base(name, surname)
     {
         type = types[random];
     }

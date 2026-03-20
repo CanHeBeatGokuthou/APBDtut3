@@ -7,9 +7,10 @@ public class Camera:Equipment
 
     public Camera(string name, bool available,
         long id, string companyName, string resolution) :
-        base(name, available, id)
+        base(name, available)
     {
         this.companyName = companyName;
         this.resolution = resolution;
     }
+    
 }

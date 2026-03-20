@@ -7,7 +7,7 @@ public class Projector:Equipment
 
     public Projector(string name, bool available,
         long id, string model, int displatDistance) :
-        base(name, available, id)
+        base(name, available)
     {
         this.model = model;
         this.displatDistance = displatDistance;

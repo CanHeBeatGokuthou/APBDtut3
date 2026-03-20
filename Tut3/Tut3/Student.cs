@@ -4,8 +4,7 @@ public class Student:User
 {
     private string type;
 
-    public Student(string name, string surname,
-        long id):base(name,surname,id)
+    public Student(string name, string surname):base(name,surname)
     {
         type = "Student";
     }

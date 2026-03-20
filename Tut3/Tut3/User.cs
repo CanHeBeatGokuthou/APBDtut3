@@ -1,16 +1,14 @@
 ﻿namespace DefaultNamespace;
 
-public abstract class User
+public abstract class User:RandomIdGenerator
 {
     private string name;
     private string surname;
     private long id;
-    public User(string name, string surname, 
-        long id)
+    public User(string name, string surname)
     {
         this.name = name;
         this.surname = surname;
-        this.id = id;
-        
+        id = RandomIdGenerator.GenerateUniqueId();
     }
 }
