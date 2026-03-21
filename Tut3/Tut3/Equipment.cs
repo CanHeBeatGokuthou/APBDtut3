@@ -1,10 +1,10 @@
 ﻿namespace DefaultNamespace;
 
-public abstract class Equipment:RandomIdGenerator
+public abstract class Equipment
 {
-    string name;
-    bool available;
-    private long iD;
+    public string name;
+    public bool available;
+    public long iD;
     
 
     public Equipment(string name, bool available)

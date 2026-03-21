@@ -1,10 +1,10 @@
 ﻿namespace DefaultNamespace;
 
-public abstract class User:RandomIdGenerator
+public abstract class User
 {
-    private string name;
-    private string surname;
-    private long id;
+    public string name;
+    public string surname;
+    public long id;
     public User(string name, string surname)
     {
         this.name = name;
