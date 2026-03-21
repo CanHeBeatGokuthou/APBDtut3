@@ -1,5 +1,5 @@
 ﻿namespace DefaultNamespace;
 
-public class Rental
+public class RentalService
 {
 }

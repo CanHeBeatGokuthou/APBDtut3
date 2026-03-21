@@ -8,7 +8,7 @@ public class SpecialRecord:RentalTime
     
     public User User { get; set; }
     public Equipment Equipment { get; set; }
-
+    
     public SpecialRecord(User user, Equipment equipment,
         DateTime rentalDate, DateTime expectedReturnDate)
     {
@@ -18,4 +18,6 @@ public class SpecialRecord:RentalTime
         ExpectedReturnDate = expectedReturnDate;
         ReturnDate = null;
     }
+
+   
 }
