@@ -19,5 +19,10 @@ public class SpecialRecord:RentalTime
         ReturnDate = null;
     }
 
-   
+    public override string ToString()
+    {
+        
+    }
+
+
 }

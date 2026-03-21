@@ -41,4 +41,22 @@ public class SpecialContainer
     {
         return records.Count;
     }
+
+    public int countUserRentals(User user)
+    {
+        int count = 0;
+        foreach (SpecialRecord record in records)
+        {
+            if (record.User == user)
+            {
+                count++; 
+            }
+        }
+        return count;
+    }
+
+    public List<SpecialRecord> getAllRecords()
+    {
+        return records;
+    }
 }

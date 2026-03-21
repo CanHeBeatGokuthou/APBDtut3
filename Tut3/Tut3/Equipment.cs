@@ -6,6 +6,7 @@ public abstract class Equipment
     public bool available;
     public long iD;
     
+    
 
     public Equipment(string name, bool available)
     {
