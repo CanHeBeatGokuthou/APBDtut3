@@ -8,9 +8,13 @@ Here is explenation what works how:
 
 
 1.I created an absteact classes(User,Equipment) so that I have easy "skeleton" for creation of individual item/person
+
 2.Each Person and Equipment has it's own specyfic field but it's only because of demand in the task sheet
+
 3.I created a sepreate RadnomIdGenerator class that generates unique Id for item or user using DateTime and Random type variable
+
 4.When I had all specyfic classes for items and users I created a SpecialRecord class(It was soupoused to be a class that would work with my SpecialContainer class but yeah I couldn't make it work)
+
 5.RentalService is the class where the whole magic is happenning:
 
   1) One of the most important part of the code is .FirstOrDefault() method it does most of the heavy work in the code, it's used in order to search a container and return the matching element based on expresion in the           brackets, I used it to simplie find what I want from the container instaed of iterating with for example foreach loop .
