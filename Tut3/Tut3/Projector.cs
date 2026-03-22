@@ -2,12 +2,11 @@
 
 public class Projector:Equipment
 {
-    private string model;
-    private int displatDistance;
+    private string model { get; }
+    private int displatDistance { get; }
 
-    public Projector(string name, bool available,
-        long id, string model, int displatDistance) :
-        base(name, available)
+    public Projector(string name, string model, int displatDistance) :
+        base(name)
     {
         this.model = model;
         this.displatDistance = displatDistance;

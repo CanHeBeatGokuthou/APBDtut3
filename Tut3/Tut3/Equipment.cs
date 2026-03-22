@@ -2,18 +2,15 @@
 
 public abstract class Equipment
 {
-    public string name;
-    public bool available;
-    public long iD;
-    
-    
+    public string name { get; }
+    public bool available { get; set; } = true;
+    public long iD { get; } = RandomIdGenerator.GenerateUniqueId();
 
-    public Equipment(string name, bool available)
+    public Equipment(string name)
     {
         this.name = name;
-        this.available = available;
-        iD = RandomIdGenerator.GenerateUniqueId();
     }
+    public override string ToString()=>$"{name} [{GetType().Name}] - {(available ? "Available" : "Unavailable")}";
     
     
 }

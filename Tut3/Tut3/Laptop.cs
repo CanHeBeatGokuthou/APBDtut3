@@ -2,11 +2,11 @@
 
 public class Laptop : Equipment
 {
-    private string type;
-    private int RAM;
+    private string type { get; }
+    private int RAM { get; }
 
-    public Laptop(string name, bool available,
-        long id, string type, int ram):base(name,available)
+    public Laptop(string name, 
+        string type, int ram):base(name)
     {
         this.type = type; 
         RAM = ram;

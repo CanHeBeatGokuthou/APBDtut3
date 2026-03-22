@@ -2,14 +2,11 @@
 
 public class Student:User
 {
-    private string type;
+    public override int MaxRentals => 2;
 
-    public Student(string name, string surname):base(name,surname)
+    public Student(string name, string surname) : base(name, surname)
     {
-        type = "Student";
     }
-    public string getType()
-    {
-        return type;
-    }
+
+
 }

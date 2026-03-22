@@ -2,17 +2,12 @@
 
 public class Employee:User
 {
-    private string[] types = {"Professor", "Dean", "Librarian"};
-    int random = Random.Shared.Next(3);
-    string type;
+    public override int MaxRentals => 5;
+    public string type { get; };
 
-    public Employee(string name, string surname) : base(name, surname)
+    public Employee(string name, string surname,string type) : base(name, surname)
     {
-        type = types[random];
+        this.type = type;
     }
-
-    public string getType()
-    {
-        return type;
-    }
+    
 }

@@ -2,13 +2,20 @@
 
 public abstract class User
 {
-    public string name;
-    public string surname;
-    public long id;
+    public string name { get; }
+    public string surname { get; }
+    public long id { get; } = RandomIdGenerator.GenerateUniqueId();
+
+    public abstract int MaxRentals { get; }
+
     public User(string name, string surname)
     {
         this.name = name;
         this.surname = surname;
-        id = RandomIdGenerator.GenerateUniqueId();
+    }
+
+    public override string ToString()
+    {
+        return $"{name} {surname} ({GetType().Name})";
     }
 }
