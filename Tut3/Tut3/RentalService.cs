@@ -40,5 +40,36 @@ public class RentalService
         foundItem.available = false;
         rentals.Add(newRental);
     }
+    public void ReturnEquipment(long rentalId, DateTime returnDate) 
+    {
+        SpecialRecord activeRental = rentals.FirstOrDefault(r => r.Id == rentalId && r.IsActive) 
+                              ?? throw new RentalException("Active rental not found.");
+
+        activeRental.CompleteReturn(returnDate, DailyPenaltyRate);
+        activeRental.RentedItem.available = true;
+    }
+
+    public void MarkEquipmentUnavailable(long equipmentId) 
+    {
+        Equipment equipmentToMark = equipment.FirstOrDefault(e => e.iD == equipmentId);
+        
+        if (equipmentToMark != null) 
+        {
+            equipmentToMark.available = false;
+        }
+    }
+    public SpecialRecord GetRentalForEquipment(long equipmentId) 
+    {
+        return rentals.FirstOrDefault(r => r.RentedItem.iD == equipmentId && r.IsActive);
+    }
+    public void PrintSummaryReport() 
+    {
+        Console.WriteLine("\n--- RENTAL SERVICE SUMMARY ---");
+        Console.WriteLine($"Total Users: {users.Count}");
+        Console.WriteLine($"Total Equipment: {equipment.Count} ({equipment.Count(e => e.available)} available)");
+        Console.WriteLine($"Total Active Rentals: {rentals.Count(r => r.IsActive)}");
+        Console.WriteLine($"Total Penalties Generated: {rentals.Sum(r => r.PenaltyAmount)} PLN");
+        Console.WriteLine("------------------------------\n");
+    }
 
 }

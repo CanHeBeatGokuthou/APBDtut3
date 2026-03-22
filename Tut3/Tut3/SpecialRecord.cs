@@ -20,7 +20,7 @@ public class SpecialRecord
         DueDate = dueDate;
     }
 
-    public void CompleteReturn(DateTime actualReturnDate, long penaltyPerDay)
+    public void CompleteReturn(DateTime actualReturnDate, double penaltyPerDay)
     {
         ReturnDate = actualReturnDate;
         
